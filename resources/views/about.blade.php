@@ -4,15 +4,11 @@
 
 @section('content')
 <!-- About Section -->
-<section id="about" class="about section mt-5">
-
+<section id="about" class="about section">
     <div class="container">
-
         <div class="row position-relative">
-
             <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{asset('img/about.jpg')}}">
             </div>
-
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="inner-title">Consequatur eius et magnam</h2>
                 <div class="our-story">
@@ -38,11 +34,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </section><!-- /About Section -->
 
 <!-- Team Section -->
@@ -262,4 +255,13 @@
 
 </section><!-- /Clients Section -->
 
-@section('content')
+@endsection
+
+@section('scripts')
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/aos/aos.js') }}"></script>
+<script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+@endsection

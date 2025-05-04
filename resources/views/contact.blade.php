@@ -91,7 +91,7 @@
     </div>
 
   </section><!-- /Contact Section -->
-@section('content')
+@endsection
 
 
 

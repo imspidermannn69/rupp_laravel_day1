@@ -5,9 +5,7 @@
 @section('content')
 <!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
-
     <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
         <div class="carousel-item active">
             <img src="{{ asset('img/hero-carousel/hero-carousel-1.jpg') }}" alt="">
             <div class="container">
@@ -18,7 +16,6 @@
                 <a href="about.html" class="btn-get-started">Read More</a>
             </div>
         </div><!-- End Carousel Item -->
-
         <div class="carousel-item">
             <img src="{{ asset('img/hero-carousel/hero-carousel-2.jpg') }}" alt="">
             <div class="container">
@@ -418,6 +415,13 @@
     </div>
 
 </section><!-- /Clients Section -->
+@endsection
 
-
-@section('content')
+@section('scripts')
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/aos/aos.js') }}"></script>
+<script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+@endsection

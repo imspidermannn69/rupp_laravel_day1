@@ -15,7 +15,7 @@
 <body>
     <div id="app">
         <!-- Theme Header -->
-        <header id="header" class="header d-flex align-items-center fixed-top">
+        <header id="header" class="header d-flex align-items-center sticky-top">
             <div class="container position-relative d-flex align-items-center">
                 <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto text-decoration-none">
                     <h1 class="sitename">Seth</h1><span>.</span>
@@ -24,22 +24,9 @@
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="{{ url('/') }}" class="@if(Route::currentRouteName() == 'home') active @endif">Home</a></li>
-                        <li class="dropdown"><a href="{{ url('/about') }}"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="{{ url('/team') }}">Team</a></li>
-                                <li><a href="{{ url('/testimonials') }}">Testimonials</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="#">Deep Dropdown 1</a></li>
-                                        <li><a href="#">Deep Dropdown 2</a></li>
-                                        <li><a href="#">Deep Dropdown 3</a></li>
-                                        <li><a href="#">Deep Dropdown 4</a></li>
-                                        <li><a href="#">Deep Dropdown 5</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><a href="{{ url('/about') }}"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
                         <li><a href="{{ url('/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/service') }}">Services</a></li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -80,9 +67,12 @@
         </header>
 
         <!-- Main Content -->
-        <main class="py-4">
+        <main >
             @yield('content')
         </main>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     </div>
 
     <!-- Theme JS -->
@@ -92,6 +82,7 @@
     <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    @yield('scripts')
 
 </body>
 </html>
